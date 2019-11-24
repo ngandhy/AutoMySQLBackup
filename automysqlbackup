@@ -966,7 +966,7 @@ directory_checks_enable_logging () {
     ###################################################################################
     # Check directories and do cleanup work
 
-    checkdirs=( "${CONFIG_backup_dir}"/{hourly, daily,weekly,monthly,latest,tmp} )
+    checkdirs=( "${CONFIG_backup_dir}"/{hourly,daily,weekly,monthly,latest,tmp} )
     [[ "${CONFIG_backup_local_files[@]}" ]] && { checkdirs=( "${checkdirs[@]}" "${CONFIG_backup_dir}/backup_local_files" ); }
     [[ "${CONFIG_mysql_dump_full_schema}" = 'yes' ]] && { checkdirs=( "${checkdirs[@]}" "${CONFIG_backup_dir}/fullschema" ); }
 	[[ "${CONFIG_mysql_dump_dbstatus}" = 'yes' ]] && { checkdirs=( "${checkdirs[@]}" "${CONFIG_backup_dir}/status" ); }
