@@ -151,7 +151,7 @@ mail_cleanup () {
   # Remove annoying warning message since MySQL 5.6
   if [[ -s "$log_errfile" ]]; then
     sedtmpfile="/tmp/$(basename $0).$$.tmp"
-    grep -v "Warning: Using a password on the command line interface can be insecure." "$log_errfile" > $sedtmpfile
+    grep -v "Using a password on the command line interface can be insecure." "$log_errfile" > $sedtmpfile
     mv $sedtmpfile $log_errfile
   fi
   
